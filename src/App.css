@@ -1,0 +1,502 @@
+body{
+    background: rgb(252, 249, 249);
+}
+
+/* STYLING NAVBAR  PAGE */
+
+/* styling website name */
+.webName{
+    font-size: large;
+    font-weight: 700;
+    font-family:cursive;
+}
+
+/* styling about dropdown button */
+.dropdownButton{
+    font-size: large;
+    font-weight: 500;
+    border: none;
+    background: none;
+    color: #000; 
+}
+.dropdownButton:hover{
+    background: none;
+    color:#000 ;
+}
+.aboutBtnDropdownItem a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* styling home nav button */
+.homeNavLink a{
+    text-decoration: none;
+    color: #000;
+    font-size: large;
+    font-weight: 500; 
+    /* margin-top: -7px; */
+}
+.homeNavLink a:hover{
+    color: #000;
+}
+
+/* STYLING ABOUT AUTHOR AND ABOUT APP PAGE */
+.aboutData{
+	padding: 60px 0px 0px;
+	text-align: center;
+}
+.aboutData h3{
+	text-decoration: none;
+	color: #fff;
+    background: rgb(74, 74, 245);
+    padding: 3rem 0px 3rem;
+}
+.aboutData h4{
+    color: rgb(74, 74, 245);
+    margin-top: 1rem;
+}
+.aboutData h5{
+	margin-top:2rem;
+    margin-bottom:2rem;
+	color: #000;
+}
+
+/*  STYLING APP DESCRIPTION PAGE */
+
+.appDescription{
+    background: rgb(74, 74, 245);
+    padding-top: 0.3rem;
+    padding-bottom: 2.8rem;
+    color: #fff;
+    text-align: center;
+}
+.appDescription h3{
+    margin-top: 6rem;
+    font-weight: 700;
+}
+
+/* STYLING FEATURES PAGE */
+
+/* styling features container */
+.featuresContainer{
+    margin-top: -0.8rem;
+    margin-bottom: 7rem;
+    background: #fff;
+    border-radius: 5px;
+    /* width: 50rem; */
+}
+.featuresContainer h4{
+    padding-top:1rem;
+    text-align:center
+}
+.featuresContainer p{
+    color:rgb(128, 123, 123);
+    text-align:center
+}
+
+/* styling features button */
+.featuresForm{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+.featureButton{
+    width: 100%;
+    height: 125px;
+    border: 2px solid rgb(139, 159, 241);
+    background: #fff;
+    border-radius: 5px;
+}
+.featureButton a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+/* STYLING OF BASE TEN TO OTHER BASES CONVERTER,NumbersToRomanNumeralsConverter,OtherBasesToBaseTenConverter,
+    EnglishToYorubaTranslator,baseToBaseConverter & EnglishToFrenchTranslator PAGE */
+
+.converterContainer{
+    margin-top: 3.7rem;
+    background: #fff;
+    padding: 1.9rem 0rem 3rem;
+    text-align: center;
+    color:#000;
+    border-radius:10px;
+}
+.converterContainer h4{
+    background: rgb(74, 74, 245);
+    color: #fff;
+    padding: 3rem 0px 3rem;
+    margin-top: -1.5rem;
+}
+.userInput input{
+    width:70px;
+    background:#fff;
+    border:1px solid #000;
+    border-radius:3px;
+    margin-top:1rem
+}
+
+.userInput div input{
+    width:170px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.userInput div button{
+    width: 150px;
+    border-radius: 6px;
+    background: #fff;
+    border:2px solid rgb(109, 109, 252) ;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.converterContainer .description{
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    padding: 1rem 0rem 3rem;
+    text-align: center;
+    background: skyblue;
+}
+.converterContainer .description div,h6{
+    font-weight: bold;
+}
+
+/* STYLING FOOTER PAGE */
+
+/* Styling About column */
+.footerAboutCol h5{
+    margin-top: 1.2rem;
+    color: #fff;
+}
+.footerAboutCol .footerWebName{
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    font-family:cursive;
+    margin-top: 1.5rem;
+}
+.footerAboutCol div p{
+    color: rgb(204, 195, 195);
+}
+/* Styling Quick links column  */
+.footerLinksCol{
+    margin-top: 1.2rem;
+    margin-left: 4rem;
+}
+.footerLinksList{
+    margin-top: 1.5rem;
+}
+.footerLinksList li a{
+    text-decoration: none;
+    color:#fff
+}
+   /* Styling Social media Links column */
+
+.footerContactLinksCol{
+    margin-top: 1.2rem;
+    /* margin-left: 4rem; */
+}
+.footerContactLinksCol p{
+    color: rgb(204, 195, 195);
+    padding-bottom: 0.3rem;
+}
+.socialMediaLinkForm{
+    padding-bottom: 2rem;
+}
+.emaildivLink{
+    padding-bottom: 1rem;
+}
+.emaildivLink a{
+    text-decoration: none;
+    color:#fff
+}
+.fbLinkDiv{
+    background:  rgb(58, 94, 240);
+    padding-left: 7px;
+    padding-top: 3px ;
+    padding-bottom: 3px ;
+    border-radius: 1rem;
+}
+.fbLinkButton{
+    background: #fff;
+    border-radius: 1rem;
+    border: none;
+    /* width: 10px;
+	height: 5px */
+}
+.whatsappLinkDiv{
+    background:  green;
+    padding-left: 3px;
+    padding-top: 2px ;
+    padding-bottom: 3px ;
+    border-radius: 1rem;
+}
+.whatsappLinkButton{
+    background: none;
+    border-radius: 1rem;
+    border: none;
+}
+
+/* STYLING APP USAGE PAGE */
+.appUsageDiv{
+    background: rgb(74, 74, 245);
+    color:#fff;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+}
+.educationalQuotes{
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+/* styling game div */
+.gameDiv{
+    background: #fff;
+    text-align: center;
+    color:#000
+}
+.gameDiv button{
+    border:none;
+    background: #fff;
+}
+
+/* STYLING EDUCATIONAL GAME HOME PAGE */
+.gameContainer {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    border-radius: 2rem;
+    width:78%
+}
+
+.gameForm{
+    text-align: center;
+    color: #fff;
+}
+.gameForm h5 {
+    padding: 5rem 0px 1rem;
+    font-weight: bolder;
+    color: rgb(74, 74, 245);
+}
+.gameForm input {
+    margin-bottom: 10px;
+    padding: 10px 5rem 10px;
+    border: 3px solid rgb(74, 74, 245);
+    border-radius: 10px;
+}
+.gameForm button {
+    margin-top: 15px;
+    padding: 6px 8.6rem 6px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(74, 74, 245);
+    color: #fff;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+/*  STYLING GAME TASK PAGE  */
+.gameTaskContainer{
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    border-radius: 2rem;
+    width:75%
+}
+.gameTaskContainer h5 {
+    padding: 2rem 0px 0rem;
+    font-weight: bolder;
+    color: rgb(74, 74, 245);
+    text-align: center;
+}
+.gameTaskContainer p {
+    text-align: center;
+    font-weight: bolder;
+}
+.gameTaskForm {
+    text-align: center;
+    color: #fff;
+}
+.gameTaskForm input{
+    margin-bottom: 1rem;
+    padding: 10px 5rem 10px;
+    border: 3px solid rgb(74, 74, 245);
+    border-radius: 10px;
+}
+.gameTaskForm button {
+    padding: 6px 9.5rem 1px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(74, 74, 245);
+    color: #fff;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+ 
+/* STYLING FAILED RESULT PAGE */
+.FailedResultContainer {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    border-radius: 2rem;
+    width:65%;
+    text-align: center;
+}
+.FailedResultContainer p {
+    color: red;
+    padding-top: 3rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+.FailedResultContainer form button {
+    padding: 6px 2.5rem 6px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(74, 74, 245);
+    color: #fff;
+    font-weight: bolder;
+    margin-right: 8px;
+}
+
+/*  STYLING SUCCESS RESULT PAGE */
+.SuccessResultContainer{
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    border-radius: 2rem;
+    width:65%;
+    text-align: center;
+}
+.SuccessResultContainer p {
+    color: green;
+    padding-top: 3rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+.SuccessResultContainer form button {
+    padding: 6px 2.5rem 6px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(74, 74, 245);
+    color: #fff;
+    font-weight: bolder;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+            /* DATA FLIER STYLE  */
+/* .container{
+   width: 42%;
+   padding-bottom: 1rem;
+}
+.colTitle img{
+    margin-right: 8px;
+    margin-top: 2rem;
+}
+.title{
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 20px;
+   padding-top: 4rem;
+}
+.subTitle{
+    color: rgb(240, 224, 10); 
+    font-weight: 700;
+    margin-top: -8px;
+    margin-left: 3.5rem;  
+}
+.subTitle2{
+    color: #fff; 
+    font-weight: 700;
+    margin-top: -5px;
+    margin-left: 3.3rem;
+    font-size: smaller;
+}
+.rightSideCol{
+    margin-top: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;    
+}
+.rightSideCol h3{
+    margin-bottom: -9px;
+}
+.rightSideCol P{
+    margin-bottom: -0.4rem;
+    margin-top: 2rem;
+    font-size: 10px;
+    font-weight: medium;
+}
+.rightSideCol img{
+    margin-top: -7rem;
+    margin-right: -0.7rem;
+    float: right;
+}
+.dataPlans img{
+    margin-top: 3rem;
+    margin-left: 1.2rem;
+    border: none
+}
+.networkLogo{
+    float: right;
+    border: 2px solid yellow;
+    margin-top: 3rem;
+    padding-bottom: 6px;
+}
+.networkLogo img{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.networkLogo div{
+    margin-left: 10px;
+    font-size: lighter;
+    font-weight: 700;
+}
+.address{
+    margin-top: 1rem;
+}
+.address b{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.AccountDetails{
+    float: right;
+    margin-top: -1.8rem;
+    
+}
+.AccountDetails div{
+    margin-left: -4rem;
+    color: yellow;
+    font-weight: 700;
+}
+.AccountDetails b{
+    color: white;
+    font-weight: 700;
+}
+.AccountDetails p{
+    color: white;
+    font-weight: 700;
+    margin-top: -1.7rem;
+    margin-left: -2rem;
+} */
