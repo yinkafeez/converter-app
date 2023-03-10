@@ -53,7 +53,7 @@ function AppUsage() {
                 <Link to="/educational-game">
                     <button>    
                         <h3>EDUCATIONAL GAME</h3>
-                        <IoGameController class="text-primary" style={{width: "120px",height: "105px"}} />
+                        <IoGameController className="text-primary" style={{width: "120px",height: "105px"}} />
                     </button>
                 </Link>
             </div>

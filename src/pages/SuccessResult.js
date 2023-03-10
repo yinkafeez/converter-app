@@ -69,12 +69,13 @@ function SuccessResult() {
         <>
             <Navbar />
             <Container className="SuccessResultContainer">
+                <h2> GAME <br /> PASS </h2>
                 <p>
                     Great! {nickname}, 
                     Your guess : {userGuess},  
                     computer guess : {randNum},<br />
                     You won.
-                </p> <br />
+                </p>
 
                 <form>
                     <button onClick={handleRestartBtnClick}>

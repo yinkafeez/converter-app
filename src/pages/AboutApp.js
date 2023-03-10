@@ -8,10 +8,10 @@ function AboutApp() {
     return(
         <>
             <Navbar />
-            <div className="aboutData">
+            <div className="about">
                 <h3>About the App</h3>
                 <h4>About App</h4>
-                <span className="webName"> 
+                <span className="webName" style={{fontFamily:"cursive"}}> 
                         <SiConvertio class="text-primary" style={{width: "50px",height: "35px",}} /> 
                          Konvate 
                 </span>

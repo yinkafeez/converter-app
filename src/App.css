@@ -1,31 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Italiana&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Italiana&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@300;400;500;600;700;800;900&family=Source+Serif+4:wght@1,8..60,200;1,8..60,300;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700;1,8..60,800;1,8..60,900&display=swap');
+
 body{
     background: rgb(252, 249, 249);
 }
 
 /* STYLING NAVBAR  PAGE */
 
-/* styling website name */
-.webName{
-    font-size: large;
-    font-weight: 700;
-    font-family:cursive;
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
 }
 
-/* styling about dropdown button */
-.dropdownButton{
-    font-size: large;
-    font-weight: 500;
-    border: none;
-    background: none;
-    color: #000; 
+.list {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    margin-top: -2.0rem;
+    justify-content: right;
+    position: relative;
 }
-.dropdownButton:hover{
-    background: none;
-    color:#000 ;
+.items {
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: 'poppins';
+    color: #000;
+    cursor: pointer;
 }
-.aboutBtnDropdownItem a{
+.items a {
     text-decoration: none;
     color: #000;
+}
+.navbar-nav{
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    justify-content: center;
+    position: relative;
+}
+.webName{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+nav .btn {
+    display: none;
+    position: absolute;
+    right: 18px;
+    top: 7px;
+    padding: 5px;
+    color: #000;
+    font-size: 18px;
 }
 
 /* styling home nav button */
@@ -40,39 +68,77 @@ body{
     color: #000;
 }
 
-/* STYLING ABOUT AUTHOR AND ABOUT APP PAGE */
-.aboutData{
+
+/* STYLING  ABOUT APP PAGE */
+.about{
 	padding: 60px 0px 0px;
 	text-align: center;
 }
-.aboutData h3{
+.about h3{
 	text-decoration: none;
 	color: #fff;
     background: rgb(74, 74, 245);
     padding: 3rem 0px 3rem;
+    font-family: 'Mulish';
+    font-size: 40px;
+    font-weight: 800;
 }
-.aboutData h4{
+.about h4{
     color: rgb(74, 74, 245);
     margin-top: 1rem;
+    font-family: 'poppins';
+    font-size: 25px;
+    font-weight: 500;
 }
-.aboutData h5{
+.about h5{
+    margin: 0 auto;
 	margin-top:2rem;
-    margin-bottom:2rem;
+    margin-bottom:3rem;
 	color: #000;
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 750px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
 }
 
 /*  STYLING APP DESCRIPTION PAGE */
 
 .appDescription{
-    background: rgb(74, 74, 245);
+    background-image: url("images/img2.jpg");
+    max-width: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 0.3rem;
     padding-bottom: 2.8rem;
     color: #fff;
     text-align: center;
+    justify-content: center;
 }
 .appDescription h3{
     margin-top: 6rem;
     font-weight: 700;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-size: 35px;
+}
+.appDescription p{
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-family: 'poppins';
+    font-style: normal;
+    font-size: 19px;
+    max-width: 830px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 /* STYLING FEATURES PAGE */
@@ -83,33 +149,45 @@ body{
     margin-bottom: 7rem;
     background: #fff;
     border-radius: 5px;
-    /* width: 50rem; */
 }
 .featuresContainer h4{
     padding-top:1rem;
-    text-align:center
+    text-align:center;
+    font-family: 'Mulish';
+    color : rgb(57, 57, 59);
 }
 .featuresContainer p{
     color:rgb(128, 123, 123);
-    text-align:center
+    text-align:center;
+    font-family: 'poppins'
 }
 
 /* styling features button */
+.featuresRow{
+    justify-content: center;
+}
 .featuresForm{
     margin-top: 2rem;
     margin-bottom: 1rem;
-
 }
 .featureButton{
     width: 100%;
     height: 125px;
     border: 2px solid rgb(139, 159, 241);
     background: #fff;
-    border-radius: 5px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
 }
 .featureButton a{
     text-decoration: none;
     color: #000;
+    font-weight: 700;
+}
+.featuresText{
+    font-family: 'poppins';
+    font-style: normal;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -129,27 +207,39 @@ body{
     color: #fff;
     padding: 3rem 0px 3rem;
     margin-top: -1.5rem;
+    font-family: 'Mulish';
 }
-.userInput input{
+.userInputCol input{
     width:70px;
     background:#fff;
     border:1px solid #000;
     border-radius:3px;
     margin-top:1rem
 }
+.userInputRow{
+    margin-bottom: 1.5rem;
+    margin: 0 auto;
+}
 
-.userInput div input{
+.userInputDiv input{
+    background:#fff;
+    border:1px solid #000;
+    border-radius:3px;
     width:170px;
     text-align: center;
     margin-bottom: 1rem;
 }
-.userInput div button{
+.userInputDiv input::placeholder{
+    margin-left: 5px;
+}
+.userInputDiv button{
     width: 150px;
     border-radius: 6px;
     background: #fff;
     border:2px solid rgb(109, 109, 252) ;
     font-size: 1.3rem;
     font-weight: bold;
+    font-family: 'Mulish';
 }
 .converterContainer .description{
     margin-top: 5rem;
@@ -157,117 +247,112 @@ body{
     padding: 1rem 0rem 3rem;
     text-align: center;
     background: skyblue;
+    font-family: 'poppins';
 }
-.converterContainer .description div,h6{
-    font-weight: bold;
+.converterContainer .description h3{
+    font-weight: 400;
+    font-family: 'poppins';
+}
+.converterContainer .description div{
+    margin: 0 auto;
+    font-weight: 400;
+    font-family: 'poppins';
+    /* max-width: 850px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; */
+}
+.converterContainer .description div h6{
+    margin: 0 auto;
+    font-weight: 400;
+    font-family: 'poppins';
+    /* max-width: 400px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; */
 }
 
 /* STYLING FOOTER PAGE */
-
-/* Styling About column */
-.footerAboutCol h5{
-    margin-top: 1.2rem;
-    color: #fff;
+.footerContainer{
+    background: #AAABB8;
+    height: 25vh;
+    padding-top: 3rem;
+    /* background: #464866 */
 }
-.footerAboutCol .footerWebName{
-    color: #fff;
-    font-size: large;
-    font-weight: 700;
-    font-family:cursive;
-    margin-top: 1.5rem;
+.footerSocialMediaLinkdiv{
+    text-align: center;
 }
-.footerAboutCol div p{
-    color: rgb(204, 195, 195);
-}
-/* Styling Quick links column  */
-.footerLinksCol{
-    margin-top: 1.2rem;
-    margin-left: 4rem;
-}
-.footerLinksList{
-    margin-top: 1.5rem;
-}
-.footerLinksList li a{
-    text-decoration: none;
-    color:#fff
-}
-   /* Styling Social media Links column */
-
-.footerContactLinksCol{
-    margin-top: 1.2rem;
-    /* margin-left: 4rem; */
-}
-.footerContactLinksCol p{
-    color: rgb(204, 195, 195);
-    padding-bottom: 0.3rem;
-}
-.socialMediaLinkForm{
-    padding-bottom: 2rem;
-}
-.emaildivLink{
-    padding-bottom: 1rem;
-}
-.emaildivLink a{
-    text-decoration: none;
-    color:#fff
-}
-.fbLinkDiv{
-    background:  rgb(58, 94, 240);
-    padding-left: 7px;
-    padding-top: 3px ;
-    padding-bottom: 3px ;
-    border-radius: 1rem;
-}
-.fbLinkButton{
+.footerfbcontainer{
     background: #fff;
-    border-radius: 1rem;
+    padding: 3px 2px;
+    height: 90px;
+    width: 90px;
     border: none;
-    /* width: 10px;
-	height: 5px */
-}
-.whatsappLinkDiv{
-    background:  green;
-    padding-left: 3px;
-    padding-top: 2px ;
-    padding-bottom: 3px ;
-    border-radius: 1rem;
-}
-.whatsappLinkButton{
-    background: none;
-    border-radius: 1rem;
-    border: none;
+    border-radius: 40px;
+    margin-right: 10px;
 }
 
 /* STYLING APP USAGE PAGE */
 .appUsageDiv{
-    background: rgb(74, 74, 245);
+    background-image: url("images/img3.jpg");
+    max-width: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color:#fff;
-    padding-top: 3rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 .educationalQuotes{
     padding-top: 1rem;
     margin-bottom: 2.5rem;
-    background: #fff;
+    background: rgb(247, 236, 236);
     color: #000;
     text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.educationalQuotes h3{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 25px;
+}
+.carousel-control-prev,.carousel-control-next {
+    display: none;
+}
+.carousel-indicators{
+    display: none;
 }
 /* styling game div */
 .gameDiv{
-    background: #fff;
+    background:rgb(247, 236, 236);
     text-align: center;
-    color:#000
+    color:#000;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 .gameDiv button{
     border:none;
-    background: #fff;
+    background: none;
+}
+.gameDiv button h3 {
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 25px;
 }
 
 /* STYLING EDUCATIONAL GAME HOME PAGE */
 .gameContainer {
     margin-top: 7rem;
     margin-bottom: 5rem;
-    background: #fff;
+    background-image: url("images/img3.jpg");
+    max-width: 100%;
+    /* width: 100%; */
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
@@ -282,17 +367,23 @@ body{
 .gameForm h5 {
     padding: 5rem 0px 1rem;
     font-weight: bolder;
-    color: rgb(74, 74, 245);
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 28px;
 }
 .gameForm input {
     margin-bottom: 10px;
-    padding: 10px 5rem 10px;
+    padding: 10px 1.5rem;
+    width: 53%;
     border: 3px solid rgb(74, 74, 245);
     border-radius: 10px;
+    font-family: 'poppins';
 }
 .gameForm button {
     margin-top: 15px;
-    padding: 6px 8.6rem 6px;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    width: 53%;
     border-radius: 10px;
     border: none;
     background: rgb(74, 74, 245);
@@ -305,22 +396,29 @@ body{
 .gameTaskContainer{
     margin-top: 7rem;
     margin-bottom: 5rem;
-    background: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 55vh;
+    background-image: url("images/img3.jpg");
+    max-width: 100%;
+    height: 65vh;
     border-radius: 2rem;
-    width:75%
+    width:78%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .gameTaskContainer h5 {
     padding: 2rem 0px 0rem;
-    font-weight: bolder;
-    color: rgb(74, 74, 245);
+    font-weight: 800px;
+    font-size: 28px;
+    color: #fff;
     text-align: center;
+    font-family: 'Mulish';
 }
 .gameTaskContainer p {
     text-align: center;
-    font-weight: bolder;
+    font-weight: 500px;
+    font-size: 18px;
+    font-family: 'poppins';
+    color: #fff;
 }
 .gameTaskForm {
     text-align: center;
@@ -328,12 +426,17 @@ body{
 }
 .gameTaskForm input{
     margin-bottom: 1rem;
-    padding: 10px 5rem 10px;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    text-align: center;
+    width: 52%;
     border: 3px solid rgb(74, 74, 245);
     border-radius: 10px;
 }
 .gameTaskForm button {
-    padding: 6px 9.5rem 1px;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    width: 52%;
     border-radius: 10px;
     border: none;
     background: rgb(74, 74, 245);
@@ -341,27 +444,45 @@ body{
     font-weight: bolder;
     margin-bottom: 3rem;
 }
+.comGuessResult{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'poppins';
+}
+.userGuessResult{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'poppins';
+}
  
 /* STYLING FAILED RESULT PAGE */
 .FailedResultContainer {
     margin-top: 7rem;
     margin-bottom: 5rem;
-    background: #fff;
+    background: red;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35vh;
+    background-position: center;
+    height: 60vh;
     border-radius: 2rem;
     width:65%;
     text-align: center;
 }
+.FailedResultContainer h2{
+    padding-top: 1rem;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Mulish';
+    font-weight: 800;
+}
 .FailedResultContainer p {
-    color: red;
-    padding-top: 3rem;
+    color: #fff;
+    padding-top: 1.5rem;
     font-size: larger;
     font-weight: bolder;
 }
 .FailedResultContainer form button {
-    padding: 6px 2.5rem 6px;
+    padding: 4px 2.5rem 6px;
     border-radius: 10px;
     border: none;
     background: rgb(74, 74, 245);
@@ -374,17 +495,24 @@ body{
 .SuccessResultContainer{
     margin-top: 7rem;
     margin-bottom: 5rem;
-    background: #fff;
+    background-image: url("images/success.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35vh;
+    height: 60vh;
     border-radius: 2rem;
     width:65%;
     text-align: center;
 }
+.SuccessResultContainer h2{
+    padding-top: 1rem;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Mulish';
+    font-weight: 800;
+}
 .SuccessResultContainer p {
-    color: green;
-    padding-top: 3rem;
+    color: #fff;
+    padding-top: 1.5rem;
     font-size: larger;
     font-weight: bolder;
 }
@@ -398,6 +526,327 @@ body{
     margin-right: 8px;
 }
 
+
+/* Navbar style on smaller screen */
+@media screen and (max-width: 576px) {
+    .list {
+        flex-direction: column;
+        background: #fff;
+        height: 100vh;
+        width: 75%;
+        margin-left: 15.1rem;
+        padding-top: 2rem;
+        padding-left: 4rem 
+    }
+    .items:nth-child(1){
+        margin-top: 50px;
+    }
+    .items {
+        margin-right: 0px;
+        margin-bottom: 1.8rem;
+        font-size: 18px;  
+    }
+    nav .btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width:450px) {
+    /* STYLING NAVBAR  PAGE */
+
+    nav .btn {
+        font-size: 12px;
+    }
+    .list {
+        width: 75%;
+        margin-left: 14rem;
+        padding-left: 3rem 
+    }
+
+}
+
+@media screen and (max-width:380px) {
+    .list {
+        margin-left: 13.5rem;
+        padding-left: 2rem 
+    }
+}
+
+/* styling app description on smaller screen */
+@media screen and (max-width: 600px) {
+
+.appDescription h3{
+    margin-top: 4rem;
+    font-size: 28px;
+}
+.appDescription p{
+    margin: 0 auto;
+    font-size: 17px;
+    max-width: 750px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+}
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+    .appDescription h3{
+        margin-top: 4rem;
+        font-size: 32px;
+    }
+    .appDescription p{
+        margin: 0 auto;
+        font-size: 19px;
+        max-width: 750px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* feature style on smaller screen */
+@media screen and (max-width : 522px) {
+    .featuresContainer{
+       
+        margin-bottom: 3rem;
+    }
+    .featuresForm{
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .featuresText{
+        font-size: 16px;
+    }
+}
+
+/* App usage style on smaller screen */
+
+@media screen and (max-width: 450px) {
+    .educationalQuotes{
+        margin-bottom: 1.7rem;
+    }
+    .educationalQuotes h3{
+        font-size: 20px;
+    }
+    .educationalQuotes h5{
+        font-size: 15px;
+    }
+    /* styling game div */
+    .gameDiv{
+        padding-top: 1rem;
+    }
+    .gameDiv button h3 {
+        font-size: 20px;
+    }
+}
+
+/* educationalgame homepage style on smaller screen */
+@media screen and (max-width: 450px){
+.gameContainer {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    height: 65vh;
+    width:78%
+}
+.gameForm h5 {
+    padding: 2.4rem 0px 0.5rem;
+    font-size: 15px;
+}
+.gameForm input {
+    padding: 7px 1.5rem;
+    width: 87%;
+    border: 3px solid rgb(74, 74, 245);
+    border-radius: 10px;
+    font-family: 'poppins';
+}
+.gameForm input::placeholder{
+    font-size: 14px;
+}
+.gameForm button {
+    width: 87%;
+}
+}
+@media screen and (min-width: 450px) and (max-width: 660px) {
+    .gameForm input {
+        padding: 7px 1.5rem;
+        width: 87%;
+        border: 3px solid rgb(74, 74, 245);
+        border-radius: 10px;
+        font-family: 'poppins';
+    }
+    .gameForm input::placeholder{
+        font-size: 14px;
+    }
+    .gameForm button {
+        width: 87%;
+    }
+}
+@media screen and (min-width: 660px) and (max-width: 700px) {
+    .gameForm input {
+        padding: 10px 1.5rem;
+        width: 80%;
+        border: 3px solid rgb(74, 74, 245);
+        border-radius: 10px;
+        font-family: 'poppins';
+    }
+    .gameForm input::placeholder{
+        font-size: 17px;
+    }
+    .gameForm button {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .gameForm input {
+        padding: 10px 1.5rem;
+        width: 65%;
+        border: 3px solid rgb(74, 74, 245);
+        border-radius: 10px;
+        font-family: 'poppins';
+    }
+    .gameForm input::placeholder{
+        font-size: 17px;
+    }
+    .gameForm button {
+        width: 65%;
+    }
+}
+
+/* game tast page style on smaller screen */
+@media screen and (max-width:530px) {
+.gameTaskContainer{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    height: 58vh;
+    width:78%;
+}
+.gameTaskContainer h5 {
+    padding: 3.5rem 0px 0rem;
+    font-weight: 800px;
+    font-size: 18px;
+}
+.gameTaskContainer p {
+    font-size: 15px;
+}
+
+.gameTaskForm input{
+    width: 75%;
+}
+.gameTaskForm button {
+    width: 75%;
+}
+.comGuessResult{
+    margin-top: -2rem;
+}
+}
+
+/* failed result page style on smaller screen */
+@media screen and (max-width:456px) {
+    .FailedResultContainer {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        height: 60vh;
+    }
+    .FailedResultContainer h2{
+        font-size: 40px;
+    }
+    .FailedResultContainer p {
+        padding-top: 1rem;
+        margin-bottom: 19px;
+    }
+    .FailedResultContainer form button {
+        margin-bottom: 8px;
+    }
+}
+
+/* success result page style on smaller screen */
+@media screen and (max-width:456px) {
+    .SuccessResultContainer{
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        height: 70vh;
+    }
+    .SuccessResultContainer h2{
+        font-size: 40px;
+    }
+    .SuccessResultContainer p {
+        padding-top: 1rem;
+        margin-bottom: 19px;
+    }
+    .SuccessResultContainer form button {
+        margin-bottom: 8px;
+    }
+}
+
+/* About page style on smaller screen */
+@media screen and (max-width:450px) {
+    .about h3{
+        padding: 2rem 0px 2rem;
+        font-size: 30px;
+    }
+    .about h4{
+        font-size: 20px;
+    }
+    .webName{
+        font-size: 20px;
+    }
+    .about h5{
+        margin-top:2.5rem;
+        margin-bottom:3.5rem;
+        font-size: 18px;
+        max-width: 750px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* converter features style on small screen */
+@media screen and (max-width:330px) {
+    .converterContainer{
+        padding: 1.5rem 0rem 2.5rem;
+    }
+    .converterContainer h4{
+        padding: 2rem 0px 2rem;
+        font-size: 20px;
+    }
+    .userInput b{
+        margin-left: 8rem;
+    }
+    
+    .converterContainer .description h3{
+        font-weight: 400;
+        font-family: 'poppins';
+        font-size: 22px;
+    }
+    .converterContainer .description div{
+        margin: 0 auto;
+        font-weight: 400;
+        font-family: 'poppins';
+        font-size: 18px;
+    }
+    .converterContainer .description div h6{
+        margin: 0 auto;
+        font-weight: 400;
+        font-family: 'poppins';
+    }
+}
+
+/* each coverter feature page style on small screen */
+@media screen and (max-width:330px) {
+    .userInputRow{
+        margin-left: -7.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+@media screen and (min-width:330px) and (max-width:1200px){
+    .userInputRow{
+        margin-bottom: 1.5rem;
+    }
+}
 
 
 

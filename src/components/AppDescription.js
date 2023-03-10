@@ -8,9 +8,9 @@ function AppDescription() {
            <p>
                Konvate contains quick refrence information and tools for converting from 
                one base to another,conversion of a number in one base to a number in another base,
-               conversion from roman numerals to Figure,& translation of words into different languages
+               conversion from roman numerals to Figures,& translation of texts into different languages
             </p>
-           <img src={Student} alt="me" />
+          
        </div>
     )
 

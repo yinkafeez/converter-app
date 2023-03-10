@@ -23,19 +23,19 @@ function ConverterContainer() {
     return(
         <>
             <Routes>
-                <Route path="/Konvate"
+                <Route path="/"
                     element={
                         <>
                             <Navbar />
                             <AppDescription />
                             <Features />
                             <AppUsage />
-                            <Footer />
+                            <Footer  />
+                            
                         </>
                     }
                 />
-                <Route path="about-app" element={<AboutApp />} />
-                <Route path="about-author" element={<AboutAuthor />} />
+                <Route path="/about" element={<AboutApp />} />
                 <Route path="/base-ten-to-other-base-converter" element={<BaseTenToOtherBaseConverter />} />
                 <Route path="/other-bases-to-base-to-converter" element={<OtherBasesToBaseTenConverter />} />
                 <Route path="/numbers-to-roman-numeral-converter" element={<NumbersToRomanNumeralsConverter />} />

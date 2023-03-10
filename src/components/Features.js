@@ -27,11 +27,6 @@ function Features() {
             text:" Conversion from Roman Numerals to Figure",
             path:"/numbers-to-roman-numeral-converter"
         },
-        // {
-        //     id:5,
-        //     text: "Translation of words from English to French",
-        //     path:"/English-to-French-Translator" 
-        // },
         {
             id:6,
             text: "Text Translator",
@@ -42,25 +37,29 @@ function Features() {
 
     return(
             <Container className=" featuresContainer">
-                <Row>
-                    <h4>CATEGORIES</h4>
-                    <p>Get your task done in any of the listed categories </p>
+                
+                <h4>CATEGORIES</h4>
+                <p>Get your task done in any of the listed categories </p>
+                    <Row className="featuresRow">
                         {features.map(feature =>{
-                                return(
+                            return(
                                 
-                                    <Col className="sm-6 lg-4">                  
-                                        <form className="featuresForm">
+                                <Col xs={6} lg={4}>                  
+                                    <form className="featuresForm">
+                                        <Link to={feature.path} key={feature.id}>
                                             <button className="featureButton">
-                                                <Link to={feature.path} key={feature.id}>
-                                                        <div className="featuresText">{feature.text} </div>                                                    
-                                                </Link>
+                                                
+                                                <div className="featuresText">{feature.text} </div>                                                    
+                                            
                                             </button>
-                                        </form>
-                                    </Col>
+                                        </Link>
+                                    </form>
+                                </Col>
                                 
-                                )	
-                            })}
-                </Row>
+                            )	
+                            
+                        })}
+                    </Row>
             </Container>
 
     )

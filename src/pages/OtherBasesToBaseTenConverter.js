@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 function OtherBasesToBaseTenConverter(){
 
@@ -62,16 +64,26 @@ function OtherBasesToBaseTenConverter(){
             <Container className="converterContainer">
                 <h4> CONVERSION FROM OTHER BASES TO BASE TEN </h4>
                 <form  className="userInput" onSubmit={handleSubmit}>
-                    <b>From base:</b> <input
+
+                    <Row className="userInputRow">
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>From base:</b> <input
                                         type="number" 
                                         value={fromBaseInput}
                                         onChange={fromBaseInputOnChange}
-                                    />
-                    <b style={{marginLeft:"35px"}}>To base:</b>   <input 
-                                                                    type="number" 
-                                                                    value={toBaseInput}
-                                                                /> <br />
-                    <div>                                                
+                            />
+                        </Col>
+                        
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>To base:</b>   <input 
+                                                    type="number" 
+                                                    value={toBaseInput}
+                                                /> <br />
+                        </Col>
+
+                    </Row>
+
+                    <div className="userInputDiv">                                                
                         <input 
                             type="text" 
                             placeholder="enter value" 
@@ -97,7 +109,7 @@ function OtherBasesToBaseTenConverter(){
                     <h3><b>HOW TO CONVERT NUMBERS FROM  OTHER BASES TO BASE TEN BY WORKINGS</b></h3>
                     <div>
                        Multiply each digit with the base raised to the power of the digit number
-                       (starting right digit number 0);<br />
+                       (starting right digit number 0); <br />
                        decimal(base ten) = sum (digit x based digit x number)
                     </div>
                 </div>

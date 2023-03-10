@@ -2,6 +2,8 @@ import React,{useState,useEffect} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 function BaseTenToOtherBaseConverter(){
 
@@ -99,17 +101,27 @@ function BaseTenToOtherBaseConverter(){
             <Navbar />
             <Container className="converterContainer">
                 <h4> CONVERSION FROM BASE TEN TO OTHER BASES </h4>
-                <form  className="userInput" id="form" onSubmit={handleSubmit}>
-                    <b>From base:</b> <input
+                <form className="userInput" id="form" onSubmit={handleSubmit}>
+                    
+                    <Row className="userInputRow">
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>From base:</b> <input
                                         type="number" 
                                         value={initialBaseInput}
-                                    />
-                    <b style={{marginLeft:"35px"}}>To base:</b>   <input 
+                            />
+                        </Col>
+                        
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>To base:</b>   <input 
                                                                     type="number" 
                                                                     value={destinationBaseInput}
                                                                     onChange={destinationBaseInputOnChange}
                                                                 /> <br />
-                    <div>                                                
+                        </Col>
+
+                    </Row>
+                    
+                    <div className="userInputDiv">                                                
                         <input 
                             type="text" 
                             placeholder="enter value" 

@@ -32,7 +32,7 @@ function TextTranslator(){
         })
         .then ((response) => {
             setDetectLanguageKey(response.data[0].language)
-        })
+        }, [])
     }
 
     // GETTING SUPPORTED LANGUAGES IN THE API
@@ -69,26 +69,35 @@ function TextTranslator(){
         e.preventDefault()
     }
 
+    //input style
+    const style ={
+        width:'290px'
+    }
+
     return(
         <>
             <Navbar />
             <Container className="converterContainer">
                 <h4> TEXT TRANSLATOR </h4>
                 <form  className="userInput" onSubmit={handleSubmit}>
-                    <div>                                                
-                        <input 
+
+                    <div className="userInputDiv">                                                
+                        <textarea 
                             type="text" 
                             placeholder="type text to translate..."
                             onChange={inputTextOnchange} 
                             value={inputText}
+                            style={style}
                         />
+                        <br />
                         
-                        <input 
+                        <textarea 
                             type="text"
                             placeholder="answer" 
-                            class="ms-4" 
+                            // class="ms-4" 
                             onChange={resultInputOnchange}
                             value={resultInput}
+                            style={style}
                         /> <br />
 
                         <select className="pt-1 pb-1 px-5 ps-5" onChange={languageKey}>
@@ -108,12 +117,13 @@ function TextTranslator(){
                             Translate
                         </button>
                     </div>
+                    
                 </form>
 
                 <div className="description">
-                    <h3><b>WE TRANSLATE FILES PROFESSIONALLY</b></h3>
+                    <h3><b>WE TRANSLATE TEXTS PROFESSIONALLY</b></h3>
                     <div>
-                      Yes. We help you translate text files accurately.
+                      Yes. We help you translate text accurately.
                     </div>
                 </div>
             </Container>

@@ -81,7 +81,8 @@ function NumbersToRomanNumeralsConverter(){
             <Container className="converterContainer">
                 <h4> CONVERSION FROM ROMAN NUMERALS TO FIGURE </h4>
                 <form  className="userInput" onSubmit={handleSubmit}>
-                    <div>                                                
+                    
+                    <div className="userInputDiv">                                                
                         <input 
                             type="text" 
                             placeholder="enter roman numeral..." 
@@ -113,7 +114,7 @@ function NumbersToRomanNumeralsConverter(){
                         X = x-n <br />
                       3) Repeat stage 1 & 2 until you get zero result of X
                     </div>
-                    <div>
+                    <p>
                         Basic Roman Numerals:<br />
                         1) I = 1 <br />
                         2) V = 5 <br />
@@ -122,7 +123,7 @@ function NumbersToRomanNumeralsConverter(){
                         5) C = 100 <br />
                         6) D = 500 <br />
                         7) M = 1000
-                    </div>
+                    </p>
                 </div>
             </Container>
 

@@ -74,6 +74,9 @@ function GameTaskPage() {
     //Computer random number
 	const randNum = Math.ceil(Math.random() * (max-min) + min)
 
+    // show and hide function of user guess and comp guessess function
+    const[guess,setGuess] = useState(false)
+
     // ONSUBMIT FUNCTION 
     function handleSubmit(e) {
         // prevent page reload
@@ -103,7 +106,8 @@ function GameTaskPage() {
             // reset attempts 
             document.getElementById("attempts").innerHTML= attempts-counter
             //show computer guess and user guess
-            document.getElementById("showResult").innerHTML= "<p style='color:black'> Computer Guess : <b style='color:green'> "+randNum+" </b></p>  <p style='color:red'>Wrong! You guessed : "+userGuess+" </p>"
+            // document.getElementById("showResult").innerHTML= "<p className='comGuessResult'> Computer Guess : <b> "+randNum+" </b></p>  <p  className='userGuessResult'>Wrong! You guessed : "+userGuess+" </p>"
+            setGuess(true)
         }
         else{
             setCounter(counter + 1)  //increase counter
@@ -124,7 +128,7 @@ function GameTaskPage() {
         <Navbar />
             <Container className="gameTaskContainer">
                 <h5>Guess a number between {min} and {max}</h5>
-                <p>Attempts left : <b className="text-danger" id="attempts">{attempts}</b> </p>
+                <p>Attempts left : <b className="text-warning" id="attempts">{attempts}</b> </p>
                 <form className="gameTaskForm" onSubmit={handleSubmit}>
                     <input 
                         type="text" 
@@ -135,7 +139,14 @@ function GameTaskPage() {
                     <button>
                         Enter
                     </button>
-                    <p id="showResult"></p>
+
+                    {/* show guesss */}
+                    {guess? (
+                        <div>
+                            <p className="comGuessResult text-success"> Computer Guess  :  {randNum} </p>
+                            <p className="userGuessResult text-danger"> Wrong! You guessed : {userGuess} </p>
+                        </div>
+                    ): null}
                 </form>
                
             </Container>

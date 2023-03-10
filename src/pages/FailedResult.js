@@ -35,7 +35,8 @@ function FailedResult() {
         <>
             <Navbar />
             <Container className="FailedResultContainer">
-                <p>Ooops! {nickname} You've exhausted your chances</p> <br />
+                <h2> GAME <br /> OVER </h2>
+                <p>Ooops! {nickname} You've exhausted your chances</p>
                 <form>
                     <button onClick={handleRestartBtnClick}>
                         Restart

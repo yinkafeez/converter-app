@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 function OtherBaseToNonDecimalBaseConverter() {
 
@@ -69,17 +71,27 @@ function OtherBaseToNonDecimalBaseConverter() {
             <Container className="converterContainer">
                 <h4> CONVERSION OF A NUMBER IN OTHER BASE TO A NON DECIMAL BASE NUMBER </h4>
                 <form  className="userInput" onSubmit={handleSubmit}>
-                    <b>From base:</b> <input
+
+                    <Row className="userInputRow">
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>From base:</b> <input
                                         type="number" 
                                         value={fromBaseInput}
                                         onChange={fromBaseInputOnchange}
-                                    />
-                    <b style={{marginLeft:"35px"}}>To base:</b>   <input 
-                                                                    type="number" 
-                                                                    value={toBaseInput}
-                                                                    onChange={toBaseInputOnchange}
-                                                                /> <br />
-                    <div>                                                
+                            />
+                        </Col>
+                        
+                        <Col xs={12} sm={6} className="userInputCol">
+                            <b>To base:</b>   <input 
+                                                    type="number" 
+                                                    value={toBaseInput}
+                                                    onChange={toBaseInputOnchange}
+                                                /> <br />
+                        </Col>
+
+                    </Row>
+                    
+                    <div className="userInputDiv">                                                
                         <input 
                             type="text" 
                             placeholder="enter value" 

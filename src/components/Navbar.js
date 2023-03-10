@@ -1,54 +1,67 @@
-import React from "react"
-import Dropdown from "react-bootstrap/Dropdown";
+import React,{useState,useEffect} from "react"
+import { MdClose } from "react-icons/md"
+import { FiMenu } from "react-icons/fi"
+import { AiFillHome } from "react-icons/ai"
+import { RiRegisteredFill } from "react-icons/ri"
+import { BiLogIn } from "react-icons/bi"
+import { FcAbout } from "react-icons/fc"
 import {SiConvertio} from "react-icons/si";
-import {Link} from "react-router-dom";
-import Container from "react-bootstrap/esm/Container"
+import {Link} from "react-router-dom"
+
 
 function Navbar() {
 
+    const[toggleMenu,setToggleMenu] = useState("")
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
+    // handle toggle function on button click
+    function handleToggle() {
+        setToggleMenu(!toggleMenu)
+    }
 
-    return(
-        <Container fluid>
-            <nav  className="topNavbar" class="navbar navbar-expand-sm  bg-white fixed-top">
-                <Container fluid>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <span className="webName"> 
-                                <SiConvertio className="text-primary" style={{width: "50px",height: "35px",}} /> 
-                                Konvate 
-                            </span>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item" className="homeNavLink">
-                            <span class="nav-link"> 
-                                <Link to="/Konvate"> Home </Link>
-                            </span>
-                        </li> 
-                        <li class="nav-item">
-                            <Dropdown>
-                                <Dropdown.Toggle className="dropdownButton">
-                                    About
-                                </Dropdown.Toggle>
+    // function that will resize the nav on every size
+    useEffect(() => {
 
-                                <Dropdown.Menu>
-                                    <Dropdown.Item  className="aboutBtnDropdownItem"> 
-                                        <Link to="/about-app"> About App </Link>
-                                    </Dropdown.Item>
-                                    <Dropdown.Item  className="aboutBtnDropdownItem">  
-                                        <Link to="/about-author"> About Author </Link>
-                                    </Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </li>
-                    </ul>
-                </Container>
-            </nav>
-        </Container>
+        const changeWidth = () => {
+          setScreenWidth(window.innerWidth);
+        }
+    
+        window.addEventListener('resize', changeWidth)
+
+        return () => {
+            window.removeEventListener('resize', changeWidth)
+        }
+    
+      }, [])
+
+      
+
+    return (
+        <nav className="fixed-top">
+           <ul class="navbar-nav">
+                <li class="nav-item">
+                    <span className="webName" style={{fontFamily:"cursive"}}> 
+                        <SiConvertio className="text-primary" style={{width: "50px",height: "35px",}} /> 
+                        Konvate 
+                    </span>
+                </li>
+            </ul>
+            {(toggleMenu || screenWidth > 576) && (
+                <ul className="list">
+                    <li className="items"><Link to="/"> Home </Link></li>
+                    <li className="items"><Link to="/about"> About </Link></li>
+                </ul>
+            )}
+            
+            <button onClick={handleToggle} className="btn">
+                {toggleMenu ? (
+				    <MdClose style={{ color: "#000", width: "30px", height: "30px",  }} />
+				  ) : (
+				    <FiMenu style={{ color: "#000", width: "30px", height: "30px",  }} />
+				)}
+            </button>
+        </nav>
     )
-
 }
-
 
 export default Navbar
