@@ -19,17 +19,17 @@ function Footer() {
             <div className="footerSocialMediaLinkdiv">
                 <span className="footerfbcontainer">
                     <a href="https://www.facebook.com/olagunju.afeez.927">
-                        <FaFacebookF class="text-primary" style={{width: "25px",height: "20px"}}/>
+                        <FaFacebookF className="text-primary" style={{width: "25px",height: "20px"}}/>
                     </a>
                 </span>
                 <span className="footerWacontainer">
                     <a href="https://wa.me//+2348132906416">
-                        <BsWhatsapp class="text-success" style={{width: "30px",height: "25px"}}/>
+                        <BsWhatsapp className="text-success" style={{width: "30px",height: "25px"}}/>
                     </a>
                 </span>
             </div>
 
-            <hr class="bg-white" />
+            <hr className="bg-white" />
             <p style={{textAlign:"center",color:"white"}}>
                 <b>2022 &copy; <b style={{fontFamily:"cursive"}}>Konvate</b> </b>
             </p>

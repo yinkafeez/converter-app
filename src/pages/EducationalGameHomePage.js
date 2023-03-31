@@ -3,13 +3,14 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Container from "react-bootstrap/esm/Container"
 import {useNavigate} from "react-router-dom"
+import GameTaskPage from "../pages/GameTaskPage"
 
 function EducationalGameHomePage() {
  
         const[nicknameInput,setNicknameInput] = useState("")
-        const[maximumRange,setMaximumRange] = useState("")
-        const[minimumRange,setMinimumRange] = useState("")
         const[attemptsInput,setAttemptsInput] = useState("")
+        const[maximumRange,setmaximumRange] = useState("")
+        const[minimumRange,setminimumRange] = useState("")
 
         // nicknameInput onChange function
         function nicknameInputOnchange(e) {
@@ -18,12 +19,12 @@ function EducationalGameHomePage() {
 
         // maximum range onChange function
         function maximumRangeOnchange(e) {
-            setMaximumRange(e.target.value)
+            setmaximumRange(e.target.value)
         }
 
         // minimum range onChange function
         function minimumRangeOnchange(e) {
-            setMinimumRange(e.target.value)
+            setminimumRange(e.target.value)
         }
 
         // attemptsInput onChange function
@@ -38,13 +39,13 @@ function EducationalGameHomePage() {
             localStorage.setItem("nickname", temp)
         },[nicknameInput])
 
-        //storing of MaximumRange in the local storage 
+        //storing of maximumRangee in the local storage 
         useEffect(() =>{
             const temp = JSON.stringify(maximumRange)
             localStorage.setItem("maximum", temp)
         },[maximumRange])
 
-        //storing of MinimumRange in the local storage 
+        //storing of minimumRangee in the local storage 
         useEffect(() =>{
             const temp = JSON.stringify(minimumRange)
             localStorage.setItem("minimum", temp)
@@ -60,8 +61,8 @@ function EducationalGameHomePage() {
         function clearInput() {
             // clear input
             setNicknameInput("")
-            setMaximumRange("")
-            setMinimumRange("")
+            setmaximumRange("")
+            setminimumRange("")
             setAttemptsInput("")
         }
          // storing useNavigate() as a variable
@@ -91,7 +92,7 @@ function EducationalGameHomePage() {
                 // calling clear input function
                 clearInput()
             }
-            //check if maximumRange,minimumRange,attemptsInput are not numbers
+            //check if maximumRangee,minimumRangee,attemptsInput are not numbers
             else if(isNaN(maximumRange) || isNaN(minimumRange) || isNaN(attemptsInput)) {
                 alert("attempts inputs,maximum & minimum range inputs must be numbers")
                 // calling clear input function

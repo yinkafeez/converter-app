@@ -38,8 +38,8 @@ function Navbar() {
 
     return (
         <nav className="fixed-top">
-           <ul class="navbar-nav">
-                <li class="nav-item">
+           <ul className="navbar-nav">
+                <li className="nav-item">
                     <span className="webName" style={{fontFamily:"cursive"}}> 
                         <SiConvertio className="text-primary" style={{width: "50px",height: "35px",}} /> 
                         Konvate 

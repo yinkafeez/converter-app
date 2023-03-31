@@ -44,9 +44,9 @@ function Features() {
                         {features.map(feature =>{
                             return(
                                 
-                                <Col xs={6} lg={4}>                  
+                                <Col xs={6} lg={4} key={feature.id}>                  
                                     <form className="featuresForm">
-                                        <Link to={feature.path} key={feature.id}>
+                                        <Link to={feature.path}>
                                             <button className="featureButton">
                                                 
                                                 <div className="featuresText">{feature.text} </div>                                                    

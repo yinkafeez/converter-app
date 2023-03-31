@@ -3,8 +3,9 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Container from "react-bootstrap/esm/Container"
 import {useNavigate} from "react-router-dom"
+import SuccessResult from "./SuccessResult"
 
-function GameTaskPage() {
+function GameTaskPage({getRandomNumber}) {
 
     //userGuess state
     const[userGuess,setuserGuess] = useState("")
@@ -19,6 +20,7 @@ function GameTaskPage() {
         // clear input
         setuserGuess("")
     }
+
 
     //storing of userGuess in the local storage 
     useEffect(() =>{
@@ -64,6 +66,7 @@ function GameTaskPage() {
     const max = parseInt(getMaximumRange());
     const min = parseInt(getMinimumRange());
     const attempts = parseInt(getAttemptsInput())
+       
 
     const[counter,setCounter] = useState(0)   //counter
     let correct = false   //correct value
@@ -71,16 +74,28 @@ function GameTaskPage() {
     // storing useNavigate() as a variable
     const navigate = useNavigate()
 
-    //Computer random number
-	const randNum = Math.ceil(Math.random() * (max-min) + min)
-
     // show and hide function of user guess and comp guessess function
     const[guess,setGuess] = useState(false)
+
+    // random number state
+    const[randNum, setRandNum] = useState("")
+    
+    function keyUp(e) {
+        setGuess(false)
+        setRandNum("")
+    }
 
     // ONSUBMIT FUNCTION 
     function handleSubmit(e) {
         // prevent page reload
-        e.preventDefault()
+        e.preventDefault()  
+
+        //Computer random number
+        const randNum = Math.ceil(Math.random() * (max-min) + min)
+        setRandNum(randNum)
+        getRandomNumber(randNum)
+        console.log(randNum,userGuess)
+        
         // conditions
         //check if user guess input is blank
         if (userGuess == "") {
@@ -104,13 +119,13 @@ function GameTaskPage() {
         else if(userGuess != randNum) {
             setCounter(counter + 1)  //increase counter
             // reset attempts 
-            document.getElementById("attempts").innerHTML= attempts-counter
+            const attemptsLeft = document.getElementById("attempts")
+            attemptsLeft.innerHTML= attempts-counter
             //show computer guess and user guess
-            // document.getElementById("showResult").innerHTML= "<p className='comGuessResult'> Computer Guess : <b> "+randNum+" </b></p>  <p  className='userGuessResult'>Wrong! You guessed : "+userGuess+" </p>"
+            //document.getElementById("showResult").innerHTML= "<p className='comGuessResult'> Computer Guess : <b> "+randNum+" </b></p>  <p  className='userGuessResult'>Wrong! You guessed : "+userGuess+" </p>"
             setGuess(true)
         }
-        else{
-            setCounter(counter + 1)  //increase counter
+        else if (userGuess == randNum) {
             correct = true      // set correct to be true
         }
 
@@ -122,25 +137,27 @@ function GameTaskPage() {
         if( correct == true){
             navigate("/educational-game/success-result")
         }
+
     }
  return(
      <>
         <Navbar />
+                    
             <Container className="gameTaskContainer">
                 <h5>Guess a number between {min} and {max}</h5>
                 <p>Attempts left : <b className="text-warning" id="attempts">{attempts}</b> </p>
-                <form className="gameTaskForm" onSubmit={handleSubmit}>
+                <form className="gameTaskForm">
                     <input 
                         type="text" 
                         placeholder="Enter number" 
                         value={userGuess}
                         onChange={userGuessOnchage}
+                        onKeyUp={keyUp}
                     /><br />
-                    <button>
+                    <button onClick={handleSubmit}>
                         Enter
                     </button>
 
-                    {/* show guesss */}
                     {guess? (
                         <div>
                             <p className="comGuessResult text-success"> Computer Guess  :  {randNum} </p>
@@ -148,7 +165,6 @@ function GameTaskPage() {
                         </div>
                     ): null}
                 </form>
-               
             </Container>
         <Footer />
     </>

@@ -42,7 +42,7 @@ function TextTranslator(){
                 setLanguageList(response.data)
             })
             getLanguageSource()
-    }, [])
+    }, [getLanguageSource])
 
     //GETTING LANGUAGE CODE FROM THE API
     function languageKey(selectedLanguage) {

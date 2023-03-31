@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Container from "react-bootstrap/esm/Container"
 import {useNavigate} from "react-router-dom"
-function SuccessResult() {
+function SuccessResult({randomNum}) {
 
      // getting stored NicknameInput from the local storage when the website unMount(reload)
      function getNicknameInput() {
@@ -48,9 +48,6 @@ function SuccessResult() {
 
      // saving minimum range as a variable
     const min = parseInt(getMinimumRange());
-
-     //Computer random number
-	const randNum = Math.ceil(Math.random() * (max-min) + min)
     
     // storing useNavigate() as a variable
     const navigate = useNavigate()
@@ -73,7 +70,7 @@ function SuccessResult() {
                 <p>
                     Great! {nickname}, 
                     Your guess : {userGuess},  
-                    computer guess : {randNum},<br />
+                    computer guess : {randomNum},<br />
                     You won.
                 </p>
 
